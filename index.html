@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louvre</title>
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.ico">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header__container container">
+            <nav class="header__nav nav">
+                <nav class="main-nav">
+                <a class="main-nav__logo link" href="index.html">
+                    <svg class="icon icon--mus-logo">
+                        <use href="./img/svgsprite/sprite.symbol.svg#mus-logo"></use>
+                    </svg>
+                    <svg class="icon icon--louvre">
+                        <use href="./img/svgsprite/sprite.symbol.svg#louvre"></use>
+                    </svg>
+                    <span class="visually-hidden">Louvre</span>
+                </a>
+                <ul class="main-nav__list list">
+                    <li class="main-nav__item">
+                        <a class="main-nav__link link" href="#visiting">Visiting</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link link" href="#explore">Explore</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link link" href="#video">Video</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link link" href="gallery">Gallery</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link link" href="#tickets">Tickets</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link link" href="#contacts">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            </nav>
+            <button class="mobile-nav-btn">
+                <div class="nav-icon"></div>
+            </button>
+        </div>
+
+</header>
+<div class="mobile-nav">
+    <ul class="mobile-nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="docs.html">Документация</a></li>
+    </ul>
+</div>
+
+    <main class="main">
+        <section class="welcome section" id="welcome">
+            <div class="welcome__container container">
+                <div class="welcome__content">
+                    <h1 class="welcome__title title">Welcome to&#160;the Louvre</h1>
+                    <p class="welcome__subtitle subtitle">From the castle to&#160;the museum</p>
+                    <a class="welcome__button button" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">
+                        Discover the Louvre
+                    </a>
+                </div>
+                <div class="welcome__slider">
+                    <button class="welcome__slider-button slider-prev slider-button-prev" type="button">
+                    <span class="visually-hidden">Предыдущее фото</span>
+                    <svg class="welcome__slider-icon icon--sld-arrow-left icon">
+                        <use href="./img/svgsprite/sprite.symbol.svg#sld-arrow-left"></use>
+                    </svg>
+                    </button>
+                    <button class="welcome__slider-button slider-next slider-button-next" type="button">
+                    <span class="visually-hidden">Следующее фото</span>
+                    <svg class="welcome__slider-icon icon--sld-arrow-rigth icon">
+                        <use href="./img/svgsprite/sprite.symbol.svg#sld-arrow-rigth"></use>
+                    </svg>
+                    </button>
+                    <ol class="welcome-pagination slider-pagination">
+                        <li class="welcome-pagination__item">
+                            <button class="welcome-pagination__button hero-pagination__button-active" type="button">
+                            <span class="visually-hidden">1</span>
+                            </button>
+                        </li>
+                        <li class="welcome-pagination__item">
+                            <button class="welcome-pagination__button" type="button">
+                            <span class="visually-hidden">2</span>
+                            </button>
+                        </li>
+                        <li class="welcome-pagination__item">
+                            <button class="welcome-pagination__button" type="button">
+                            <span class="visually-hidden">3</span>
+                            </button>
+                        </li>
+                        <li class="welcome-pagination__item">
+                            <button class="welcome-pagination__button" type="button">
+                            <span class="visually-hidden">3</span>
+                            </button>
+                        </li>
+                        <li class="welcome-pagination__item">
+                            <button class="welcome-pagination__button" type="button">
+                            <span class="visually-hidden">3</span>
+                            </button>
+                        </li>
+                    </ol>
+                    <ol class="welcome-list">
+                        <li class="welcome-list__item hero-list__item--active">
+                            <picture class="welcome-list__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/mona-1x.webp 1x, img/mona-2x.webp 2x">
+                            <img class="welcome-list__image" src="./img/mona-1x.webp" srcset="./img/mona-2x.webp"  alt="Mona Lisa"  width="1000" height="750">
+                            </picture>
+                        </li>
+                        <li class="welcome-list__item">
+                            <picture class="welcome-list__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/mona-1x.webp 1x, img/mona-2x.webp 2x">
+                            <img class="welcome-list__image" src="./img/mona-1x.webp" srcset="./img/mona-2x.webp"  alt="Mona Lisa"  width="1000" height="750">
+                            </picture>
+                        </li>
+                        <li class="welcome-list__item">
+                            <picture class="welcome-list__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/mona-1x.webp 1x, img/mona-2x.webp 2x">
+                            <img class="welcome-list__image" src="./img/mona-1x.webp" srcset="./img/mona-2x.webp"  alt="Mona Lisa"  width="1000" height="750">
+                            </picture>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="visiting section" id="visiting">
+            <div class="visiting__container container">
+                <h2 class="visiting__title title">Virtual tour</h2>
+                <ul class="visiting__list list">
+                    <li class="visiting__item  visiting-card">
+                        <a class="visiting-card__link link" href="https://www.google.com/maps/@48.8606882,2.3356791,3a,90y,328.36h,87.55t/data=!3m7!1e1!3m5!1sAF1QipMZ9YgnArbwEIbTDANeSQYFu9gNqpW_2Sv8FBvY!2e10!3e12!7i4352!8i1815">
+                            <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/mona-1x.webp 1x, img/mona-2x.webp 2x">
+                            <img class="visiting__image" src="./img/royal-1x.webp" srcset="./img/royal-2x.webp"  alt="Royal Palace"  width="440" height="285">
+                            </picture>
+                            <h3 class="visiting-card__title title">Royal Palace</h3>
+                            <p class="visiting-card__description text">360&#176; Virtual Tour</p>
+                            <p class="visiting-card__description text">Google Street Panorama View</p>
+                        </a>
+                    </li>
+                    <li class="visiting__item  visiting-card">
+                        <a class="visiting-card__link link" href="https://www.google.com/maps/@48.8563254,2.3352706,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipNRj_CwP4coDMYdCHj6qHeBeJpI2VxU5BUsOX4F!2e10!3e12!7i11000!8i5500">
+                            <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/denon-1x.webp 1x, img/denon-2x.webp 2x">
+                            <img class="visiting__image" src="./img/denon-1x.webp" srcset="./img/denon-2x.webp"  alt="Denon Wing"  width="440" height="285">
+                            </picture>
+                            <h3 class="visiting-card__title title">Denon Wing</h3>
+                            <p class="visiting-card__description text">360&#176; Virtual Tour</p>
+                            <p class="visiting-card__description text">Google Street Panorama View</p>
+                        </a>
+                    </li>
+                    <li class="visiting__item  visiting-card">
+                        <a class="visiting-card__link link" href="https://www.google.com/maps/@48.8601723,2.3395439,3a,88.4y,322.04h,84.25t/data=!3m7!1e1!3m5!1sAF1QipNMZGQuEA-pAUvIG_eP_2f3gWTKZEJ6XLVJ-Pgb!2e10!3e12!7i10240!8i5120">
+                            <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/colonade-1x.webp 1x, img/colonade-2x.webp 2x">
+                            <img class="visiting__image" src="./img/colonade-1x.webp" srcset="./img/colonade-2x.webp"  alt="Colonnade Perrault"  width="440" height="285">
+                            </picture>
+                            <h3 class="visiting-card__title title">Colonnade Perrault</h3>
+                            <p class="visiting-card__description text">360&#176; Virtual Tour</p>
+                            <p class="visiting-card__description text">Google Street Panorama View</p>
+                        </a>
+                    </li>
+                    <li class="visiting__item  visiting-card">
+                        <a class="visiting-card__link link" href="https://www.google.com/maps/@48.860183,2.3356156,3a,90y,177.69h,95.61t/data=!3m7!1e1!3m5!1sAF1QipP7uFZnTITRe-7AEVAgHAfqiCL-03gvBHcYWgF3!2e10!3e12!7i5472!8i2736">
+                            <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/greek-1x.webp 1x, img/greek-2x.webp 2x">
+                            <img class="visiting__image" src="./img/greek-1x.webp" srcset="./img/greek-2x.webp"  alt="Greek hall"  width="440" height="285">
+                            </picture>
+                            <h3 class="visiting-card__title title">Greek hall</h3>
+                            <p class="visiting-card__description text">360&#176; Virtual Tour</p>
+                            <p class="visiting-card__description text">Google Street Panorama View</p>
+                        </a>
+                    </li>
+                    <li class="visiting__item  visiting-card">
+                        <a class="visiting-card__link link" href="https://www.google.com/maps/@48.8598788,2.3355157,3a,82.2y,7.53h,94t/data=!3m7!1e1!3m5!1sAF1QipO1wkUUbyzpPjj-OR0mR5etZJT-xl-40XK8rDQ3!2e10!3e12!7i10240!8i5120">
+                            <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/lisa-1x.webp 1x, img/lisa-2x.webp 2x">
+                            <img class="visiting__image" src="./img/lisa-1x.webp" srcset="./img/lisa-2x.webp"  alt="Mona Lisa"  width="440" height="285">
+                            </picture>
+                            <h3 class="visiting-card__title title">Mona Lisa</h3>
+                            <p class="visiting-card__description text">360&#176; Virtual Tour</p>
+                            <p class="visiting-card__description text">Google Street Panorama View</p>
+                        </a>
+                    </li>
+                    <li class="visiting__item  visiting-card">
+                        <a class="visiting-card__link link" href="https://www.google.com/maps/@48.8563254,2.3352706,3a,90y,21.26h,79.91t/data=!3m7!1e1!3m5!1sAF1QipPpGAowYatVyk3MMGnZAaQkYm2EUk-Dlca06SS5!2e10!3e12!7i11304!8i5652">
+                            <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/night-1x.webp 1x, img/night-2x.webp 2x">
+                            <img class="visiting__image" src="./img/night-1x.webp" srcset="./img/night-2x.webp"  alt="Night Palace"  width="440" height="285">
+                            </picture>
+                            <h3 class="visiting-card__title title">Night Palace</h3>
+                            <p class="visiting-card__description text">360&#176; Virtual Tour</p>
+                            <p class="visiting-card__description text">Google Street Panorama View</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="explore section" id="explore">
+            <div class="explore__container container">
+                <h2 class="explore__title title title-light">Picture explore</h2>
+                <p class="explore__description text">Las Meninas is&#160;a&#160;1656 painting by&#160;Diego Vel&#225;zquez, the leading artist of&#160;the Spanish Golden Age.</p>
+                <p class="explore__description text">It&#160;was cleaned in&#160;1984 to&#160;remove a&#160;<span class="text-yellow">&#171;yellow veil&#187;</span> of&#160;dust that had gathered since the previous restoration in&#160;the 19th century.</p>
+                <p class="explore__description text">The cleaning provoked furious protests, not because the picture had been damaged in&#160;any way, but because it&#160;looked different.</p>
+                <picture class="explore__picture">
+                    <source media="(max-width: 1025px)" srcset="./img/explore-1x.webp 1x, img/explore-2x.webp 2x">
+                    <img class="explore__image" src="./img/explore-1x.webp" srcset="./img/explore-2x.webp"  alt="Picture explore"  width="720" height="700">
+                </picture>
+            </div>
+        </section>
+        <section class="video section" id="video">
+            <div class="video__container container">
+                <h2 class="video__title title">Video journey</h2>
+                <p class="video__description text">Enter and visit one of&#160;the most famous museums in&#160;the world and enjoy masterpieces such as&#160;Mona Lisa or&#160;Hammurabi&#8217;s Code</p>
+                <div>
+                    <button class="video-button slider-prev slider-button-prev" type="button">
+                        <span class="visually-hidden">Предыдущее фото</span>
+                        <svg class="welcome__slider-icon icon--arrow-left icon">
+                            <use href="./img/svgsprite/sprite.symbol.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button class="video-button slider-next slider-button-next" type="button">
+                        <span class="visually-hidden">Следующее фото</span>
+                        <svg class="welcome__slider-icon icon--arrow-rigth icon">
+                            <use href="./img/svgsprite/sprite.symbol.svg#arrow-rigth"></use>
+                        </svg>
+                    </button>
+                    <ol class="video-pagination slider-pagination list">
+                        <li class="video-pagination__item">
+                            <button class="hero-pagination__button hero-pagination__button-active" type="button">
+                            <span class="visually-hidden">1</span>
+                            </button>
+                        </li>
+                        <li class="video-pagination__item">
+                            <button class="video-pagination__button" type="button">
+                            <span class="visually-hidden">2</span>
+                            </button>
+                        </li>
+                        <li class="video-pagination__item">
+                            <button class="video-pagination__button" type="button">
+                            <span class="visually-hidden">3</span>
+                            </button>
+                        </li>
+                        <li class="video-pagination__item">
+                            <button class="video-pagination__button" type="button">
+                            <span class="visually-hidden">4</span>
+                            </button>
+                        </li>
+                        <li class="video-pagination__item">
+                            <button class="video-pagination__button" type="button">
+                            <span class="visually-hidden">5</span>
+                            </button>
+                        </li>
+                    </ol>
+                    <ol class="video-list list">
+                        <li class="video-list__item video-card video-list__item--active">
+                            <a class="video-card__video-button" href="https://youtu.be/zp1BXPX8jcU">
+                                <svg class="video-card__icon icon--play icon">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#play"></use>
+                                </svg>
+                                <span class="visually-hidden">play</span>
+                            </a>
+                              <div class="video-card__video-player" id="player"></div>
+                            <picture class="video-card__picture">
+                                <source media="(max-width: 1025px)" srcset="./img/fisst-video-1x.webp 1x, img/fisst-video-2x.webp 2x">
+                                <img class="video-card__image" src="./img/fisst-video-1x.webp" srcset="./img/fisst-video-2x.webp"  alt="first video"  width="1440" height="650">
+                            </picture>
+                            <h3 class="visually-hidden">first video</h3>
+                        </li>
+                        <li class="video-list__item video-card">
+                            <a class="video-card__video-button" href="https://youtu.be/Vi5D6FKhRmo">
+                                <svg class="video-card__icon icon--play icon">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#play"></use>
+                                </svg>
+                                <span class="visually-hidden">play</span>
+                            </a>
+                              <div class="video-card__video-player" id="player"></div>
+                            <picture class="video-card__picture">
+                                <source media="(max-width: 1025px)" srcset="./img/poster3-1x.webp 1x, img/poster3-2x.webp 2x">
+                                <img class="video-card__image" src="./img/poster3-1x.webp" srcset="./img/poster3-2x.webp"  alt="first video"  width="1440" height="650">
+                            </picture>
+                            <h3 class="visually-hidden">second video</h3>
+                        </li>
+                        <li class="video-list__item video-card">
+                            <a class="video-card__video-button" href="https://youtu.be/NOhDysLnTvY">
+                                <svg class="video-card__icon icon--play icon">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#play"></use>
+                                </svg>
+                                <span class="visually-hidden">play</span>
+                            </a>
+                              <div class="video-card__video-player" id="player"></div>
+                            <picture class="video-card__picture">
+                                <source media="(max-width: 1025px)" srcset="./img/poster1-1x.webp 1x, img/poster1-2x.webp 2x">
+                                <img class="video-card__image" src="./img/poster1-1x.webp" srcset="./img/poster1-2x.webp"  alt="first video"  width="1440" height="650">
+                            </picture>
+                            <h3 class="visually-hidden">third video</h3>
+                        </li>
+                        <li class="video-list__item video-card">
+                            <a class="video-card__video-button" href="https://youtu.be/aWmJ5DgyWPI">
+                                <svg class="video-card__icon icon--play icon">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#play"></use>
+                                </svg>
+                                <span class="visually-hidden">play</span>
+                            </a>
+                              <div class="video-card__video-player" id="player"></div>
+                            <picture class="video-card__picture">
+                                <source media="(max-width: 1025px)" srcset="./img/poster2-1x.webp 1x, img/poster2-2x.webp 2x">
+                                <img class="video-card__image" src="./img/poster2-1x.webp" srcset="./img/poster2-2x.webp"  alt="first video"  width="1440" height="650">
+                            </picture>
+                            <h3 class="visually-hidden">fourth video</h3>
+                        </li>
+                        <li class="video-list__item video-card">
+                            <a class="video-card__video-button" href="https://youtu.be/2OR0OCr6uRE">
+                                <svg class="video-card__icon icon--play icon">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#play"></use>
+                                </svg>
+                                <span class="visually-hidden">play</span>
+                            </a>
+                              <div class="video-card__video-player" id="player"></div>
+                            <picture class="video-card__picture">
+                                <source media="(max-width: 1025px)" srcset="./img/fisst-video-1x.webp 1x, img/fisst-video-2x.webp 2x">
+                                <img class="visiting__image" src="./img/fisst-video-1x.webp" srcset="./img/fisst-video-2x.webp"  alt="first video"  width="1440" height="650">
+                            </picture>
+                            <h3 class="visually-hidden">fifth video</h3>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="gallery section" id="gallery">
+            <div class="gallery__container container">
+                <h2 class="gallery__title title title-light">Art Gallery</h2>
+                <div class="gallery__wrapper">
+                    <ul class="gallery__list list">
+                    <li class="gallery__item">
+                        <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery2-1x.webp 1x, img/galery2-2x.webp 2x">
+                            <img class="visiting__image" src="./img/galery2-1x.webp" srcset="./img/galery2-2x.webp"  alt="Artemis"  width="456" height="570">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery9-1x.webp 1x, img/galery9-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery9-1x.webp" srcset="./img/galery9-2x.webp"  alt="Artemis"  width="456" height="570">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery4-1x.webp 1x, img/galery4-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery4-1x.webp" srcset="./img/galery4-2x.webp"  alt="Artemis"  width="456" height="456">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery6-1x.webp 1x, img/galery6-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery6-1x.webp" srcset="./img/galery6-2x.webp"  alt="Artemis"  width="456" height="242">
+                        </picture>
+                    </li>
+                </ul>
+                <ul class="gallery__list list">
+                    <li class="gallery__item">
+                        <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery1-1x.webp 1x, img/galery1-2x.webp 2x">
+                            <img class="visiting__image" src="./img/galery1-1x.webp" srcset="./img/galery1-2x.webp"  alt="Artemis"  width="456" height="456">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery8-1x.webp 1x, img/galery8-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery8-1x.webp" srcset="./img/galery8-2x.webp"  alt="Artemis"  width="456" height="570">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery3-1x.webp 1x, img/galery3-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery3-1x.webp" srcset="./img/galery3-2x.webp"  alt="Artemis"  width="456" height="570">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery5-1x.webp 1x, img/galery5-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery5-1x.webp" srcset="./img/galery5-2x.webp"  alt="Artemis"  width="456" height="292">
+                        </picture>
+                    </li>
+                </ul>
+                <ul class="gallery__list list">
+                    <li class="gallery__item">
+                        <picture class="visiting-card__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery7-1x.webp 1x, img/galery7-2x.webp 2x">
+                            <img class="visiting__image" src="./img/galery7-1x.webp" srcset="./img/galery7-2x.webp"  alt="Artemis"  width="456" height="570">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery10-1x.webp 1x, img/galery10-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery10-1x.webp" srcset="./img/galery10-2x.webp"  alt="Artemis"  width="456" height="456">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery15-1x.webp 1x, img/galery15-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery15-1x.webp" srcset="./img/galery15-2x.webp"  alt="Artemis"  width="456" height="456">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
+                            <source media="(max-width: 1025px)" srcset="./img/galery12-1x.webp 1x, img/galery12-2x.webp 2x">
+                            <img class="gallery__image" src="./img/galery12-1x.webp" srcset="./img/galery12-2x.webp"  alt="Artemis"  width="456" height="342">
+                        </picture>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        <section class="tickets section" id="tickets">
+            <div class="tickets__container container">
+                <h2 class="tickets__title title">BUY TICKETS</h2>
+                <div class="tickets__wrapper">
+                    <picture class="tickets__picture">
+                        <source media="(max-width: 1025px)" srcset="./img/ticet-1x.webp 1x, img/ticet-2x.webp 2x">
+                        <img class="tickets__image" src="./img/ticet-1x.webp" srcset="./img/ticet-2x.webp"  alt="Renaissance"  width="720" height="550">
+                    </picture>
+                    <form class="tickets__form form" action="https://httpbin.org/post" method="post">
+                        <fieldset class="tickets__radio">
+                            <legend class="tickets__title tickets-filter__title--radio">Ticket Type</legend><!--радиокнопки -->
+                            <ul class="tickets__list tickets-filter__list--radio">
+                                <li class="tickets__item">
+                                    <label class="tickets__control">
+                                    <input class="tickets__input visually-hidden" type="radio" name="Permanent exhibition" value="Permanent exhibition" checked>
+                                    <span class="tickets__mark"></span><!--для создания маркера-оформительного -->
+                                    <span class="tickets__label catalog-filter__label--radio">Permanent exhibition</span>
+                                    </label>
+                                </li>
+                                <li class="tickets__item">
+                                    <label class="tickets__control">
+                                    <input class="tickets__input visually-hidden" type="radio" name="Temporary exhibition" value="Temporary exhibition">
+                                    <span class="tickets__mark"></span><!--для создания маркера-оформительного -->
+                                    <span class="tickets__label catalog-filter__label--radio">Temporary exhibition</span>
+                                    </label>
+                                </li>
+                                <li class="tickets__item">
+                                    <label class="tickets__control">
+                                    <input class="tickets__input visually-hidden" type="radio" name="Combined Admission" value="Combined Admission">
+                                    <span class="tickets__mark"></span><!--для создания маркера-оформительного -->
+                                    <span class="tickets__label catalog-filter__label--radio">Combined Admission</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="tickets__range range">
+                            <legend class="tickets-title">Amount</legend><!--ползунок -->
+                            <div class="tickets-slider" id="slider"></div>
+                            <div class="tickets-field">
+                            <input class="tickets-value__min" type="text" id="min" placeholder="1">
+                            <input class="tickets-value__max" type="text" id="max" placeholder="1">
+                            </div>
+                        </fieldset>
+                        <button class="tickets__button button">Buy Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="contacts section" id="contacts">
+            <div class="contacts__container container">
+                <h2 class="visiting__title title">Contacts</h2>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <ul class="footer__list list">
+            <li class="footer__item">
+                <a class="footer__link link" href="index.html">
+                    <svg class="icon icon--mus-logo">
+                        <use href="./img/svgsprite/sprite.symbol.svg#mus-logo"></use>
+                    </svg>
+                    <svg class="icon icon--louvre">
+                        <use href="./img/svgsprite/sprite.symbol.svg#louvre"></use>
+                    </svg>
+                    <span class="visually-hidden">Louvre</span>
+                </a>
+            </li>
+            <li class="footer__item">
+                <ul class="footer__list list">
+                    <li class="footer__item">
+                        <a class="footer__link link" href="#visiting>Visiting</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="#explore">Explore</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="#video">Video</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="gallery">Gallery</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="#tickets">Tickets</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="#contacts">Contacts</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer__item">
+                <ul class="footer__list list">
+                    <li class="footer__item">
+                        <a class="footer__link link" href="https://www.youtube.com/user/louvre">
+                            <svg class="icon icon--ytb">
+                        <use href="./img/svgsprite/sprite.symbol.svg#ytb"></use>
+                    </svg>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="https://www.instagram.com/museelouvre/">
+                            <svg class="icon icon--inst">
+                        <use href="./img/svgsprite/sprite.symbol.svg#inst"></use>
+                    </svg>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="https://www.facebook.com/museedulouvre">
+                            <svg class="icon icon--fb">
+                        <use href="./img/svgsprite/sprite.symbol.svg#fb"></use>
+                    </svg>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="http://twitter.com/museelouvre">
+                        <svg class="icon icon--twt">
+                        <use href="./img/svgsprite/sprite.symbol.svg#twt"></use>
+                    </svg>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link" href="https://www.pinterest.fr/museedulouvre/">
+                            <svg class="icon icon--ptst">
+                        <use href="./img/svgsprite/sprite.symbol.svg#ptst"></use>
+                    </svg>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="footer__list list">
+            <li class="footer__item">&#169; 2021</li>
+            <li class="footer__item">
+                <a class="footer__link link" href="https://rs.school/courses/javascript-ru" target="_blank" rel="noopener noreferrer">The Rolling Scopes School</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link link" href="#" target="_blank" rel="noopener noreferrer">Username</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+    <script src="./js/index.bundle.js"></script>
+</body>
+
+</html>
