@@ -1,0 +1,227 @@
+.mobile-nav {
+	position: absolute;
+	top: -100%;
+	width: 297px;
+	height: 588px;
+    z-index: 99;
+	display: none;
+    flex-direction: column;
+    align-items: start;
+	justify-content: start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+	background: $color-black;
+	transition: all 0.2s ease-in;
+
+	@include tablet {
+		width: 100%;
+		height: max-content;
+	}
+
+	@include mobile {
+		width: 420px;
+	}
+}
+
+.mobile-nav--open {
+	transition: all 0.2s ease-in;
+	display: flex;
+	top: -5px;
+	left: 0;
+}
+
+.mobile-nav a {
+	color: #fff;
+	letter-spacing: 0.9px;
+}
+
+.mobile-nav__list {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	row-gap: 26px;
+	font-weight: 300;
+	font-size: 20px;
+
+	& .active {
+		opacity: 0.5;
+	}
+}
+
+.mobile-nav__item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.mobile-nav__link {
+	padding: 0 17px 0 33px;
+}
+
+.mobile-nav-icon {
+	display: block;
+	width: 12px;
+	height: 12px;
+	fill: $color-white;
+	stroke: $color-white;
+	&:hover,
+	&:focus,
+	&:focus-visible {
+		fill: $color-font-gd;
+		stroke: $color-font-gd;
+	}
+
+	&:active {
+		fill: $color-active-gd;
+		stroke: $color-active-gd;
+	}
+}
+
+.mobile-nav__pictures-list {
+ 	display: none;
+
+	@include tablet {
+	display: grid;
+	grid-template-columns: repeat(auto, auto);
+	grid-template-rows: repeat(auto, auto);
+	gap: 20px;
+	width: 658px;
+	padding: 35px 0 35px 0;
+	margin: 0 auto;
+	border-bottom: 1px solid $color-white;
+
+		.first-picture {
+			grid-row: 1 / 2;
+			grid-column: 1 / 3;
+			display: block;
+			margin: 0 auto;
+			padding: 0;
+			width: 658px;
+			height: 194px;
+			background-image: url('../img/mob-tabl1.jpg');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		.second-picture {
+			grid-row: 2 / 3;
+			grid-column: 1 / 2;
+			display: block;
+			margin: 0 auto;
+			padding: 0;
+			width: 319px;
+			height: 161px;
+			background-image: url('../img/mob-tabl2.jpg');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		.third-picture {
+			grid-row: 2 / 3;
+			grid-column: 2 / 3;
+			display: block;
+			margin: 0 auto;
+			padding: 0;
+			width: 319px;
+			height: 161px;
+			background-image: url('../img/mob-tabl3.jpg');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	@include mobile {
+		grid-template-columns: repeat(auto, auto, auto);
+		grid-template-rows: repeat(auto);
+		gap: 12px;
+		width: 310px;
+		padding: 35px 0 20px 0;
+
+		.first-picture {
+			grid-row: 1 / 2;
+			grid-column: 1 / 2;
+			width: 95px;
+			height: 95px;
+			background-image: url('../img/mob-menu1.jpg');
+		}
+
+		.second-picture {
+			grid-row: 1 / 2;
+			grid-column: 2 / 3;
+			width: 95px;
+			height: 95px;
+			background-image: url('../img/mob-menu2.jpg');
+		}
+
+		.third-picture {
+			grid-row: 1 / 2;
+			grid-column: 3 / 4;
+			width: 95px;
+			height: 95px;
+			background-image: url('../img/mob-menu3.jpg');
+		}
+	}
+}
+
+.mobile-nav__social-list {
+	display: none;
+
+	@include tablet {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: start;
+		gap: 25px;
+		margin: 0 auto;
+		padding: 35px 0 0 0;
+	}
+
+	@include mobile {
+		gap: 5px;
+		margin: 0 auto;
+		padding: 20px 0 0 0;
+	}
+}
+
+.mobile-nav__social-item .mobile-nav__social-link {
+	position: relative;
+	display: block;
+	width: 48px;
+	height: 48px;
+	border: 1px solid $color-white;
+	border-radius: 50%;
+  
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        border: 1px solid $color-font-gd;
+
+        .icon {
+          fill: $color-font-gd;
+          stroke: $color-font-gd;
+        }
+      }
+
+      &:active {
+        border: 1px solid $color-active-gd;
+
+        .icon {
+          fill: $color-active-gd;
+          stroke: $color-active-gd;
+        }
+      }
+  }
+
+  .mobile-nav__social-item .mobile-nav__social-link .icon {
+	fill: $color-white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }

@@ -1,0 +1,370 @@
+.video {
+    margin: 0 auto;
+    padding: 66px 0 26px 0;
+
+    @include desc-small{
+        padding: 53px 0 8px 0;
+    }
+
+    @include tablet {
+        padding: 40px 0 29px 0;
+    }
+
+    @include mobile {
+        padding: 38px 0 35px 0;
+    }
+}
+
+.video__container {
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 605px 720px;
+    grid-template-rows: auto auto auto auto;
+    gap: 40px 115px;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+
+    @include desc-small {
+        width: 984px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0 0 0 0;
+    }
+
+    @include tablet {
+        width: 728px;
+    }
+
+    @include mobile {
+        width: 380px;
+    }
+}
+
+.video__title {
+    width: max-content;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.video__description {
+    width: 720px;
+    padding: 16px 0 0 0;
+    margin: 0 0 0 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 39px;
+    letter-spacing: -0.1px;
+
+    @include desc-small {
+        display: none;
+    }
+}
+
+.video__slider {
+    width: 1440px;
+    max-height: 756px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+
+    @include desc-small {
+        width: 984px;
+        max-height: 534px;
+    }
+
+    @include tablet {
+        width: 728px;
+        max-height: 392px;
+    }
+
+    @include mobile {
+        width: 380px;
+        max-height: 252px;
+    }
+}
+
+.video__slider-thumbnail.mySwiper {
+    width: 1440px;
+    padding: 0 0 10px 0;
+    margin: 0 0 0 0;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+
+    @include desc-small {
+        width: 984px;
+        padding: 43px 0 10px 0;
+    }
+
+    @include tablet {
+        width: 728px;
+        padding: 34px 0 10px 0;
+    }
+
+    @include mobile {
+        width: 380px;
+        padding: 30px 0 55px 0;
+    }
+}
+
+.video-pagination {
+    width: max-content;
+    padding: 0 0 0 0;
+    margin: 0 auto;
+}
+
+.video-list {
+    padding: 21px 0 0 0;
+
+    @include desc-small {
+        padding: 32px 0 0 0;
+    }
+
+    @include tablet {
+        padding: 20px 0 0 0;
+    }
+
+    @include mobile {
+        padding: 18px 0 0 0;
+    }
+}
+
+.video-list__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0
+}
+
+.video-card__video-button {
+    display: block;
+    position: absolute;
+    top: 28.75%;
+    left: 42.5%;
+    width: 218px;
+    height: 218px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    border: 7px solid $color-white;
+    background-color: transparent;
+
+    @include desc-small {
+        top: 28.85%;
+        left: 42.25%;
+        width: 153px;
+        height: 153px;
+    }
+
+    @include tablet {
+        border: 3px solid $color-white;
+        top: 33.85%;
+        left: 44.45%;
+        width: 80px;
+        height: 80px;
+    }
+
+    @include mobile {
+        border: 2px solid $color-white;
+        top: 31.85%;
+        left: 43.45%;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.video-card__icon {
+    display: block;
+    position: absolute;
+    top: 20.5%;
+    left: 33.5%;
+    width: 92px;
+    height: 121px;
+    padding: 0;
+    margin: 0;
+    fill: $color-white;
+
+    @include desc-small {
+        top: 6.5%;
+        left: 33.5%;
+        width: 63px;
+        height: 121px;
+    }
+
+    @include tablet {
+        top: 16.5%;
+        left: 33.5%;
+        width: 34px;
+        height: 46px;
+    }
+
+    @include mobile {
+        top: 16.5%;
+        left: 33.5%;
+        width: 21px;
+        height: 30px;
+    }
+}
+
+.video__slider-thumbnail {
+    position: relative;
+    min-height: 316px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+
+    @include mobile {
+        min-height: max-content;
+    }
+}
+
+.video-list-thumbnail__item {
+    position: relative;
+    padding: 0;
+
+    .video-card__video-button {
+        display: block;
+        position: absolute;
+        top: 34.15%;
+        left: 42.5%;
+        width: 68px;
+        height: 48px;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        background-image: (url("../img/ytb-background.svg"));
+        border: none;
+
+        .video-card__icon {
+            display: block;
+            position: absolute;
+            top: 26.5%;
+            left: 39.5%;
+            width: 18px;
+            height: 21px;
+            padding: 0;
+            margin: 0;
+            fill: $color-white;
+        }
+
+        @include tablet {
+            top: 38.85%;
+            left: 40.45%;
+        }
+
+        @include mobile {
+            top: 28.85%;
+            left: 30.45%;
+        }
+    }
+}
+
+.video-pagination.slider-pagination {
+    position: absolute;
+    top: 295px;
+    left: 677px;
+    width: max-content;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13px;
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(153, 153, 153, 1);
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(51, 51, 51, 1);
+    }
+
+    @include tablet {
+        top: 293px;
+        left: 306px;
+    }
+
+    @include mobile {
+        top: 173px;
+        left: 127px;
+        gap: 20px;
+        max-height: 8px;
+
+        .swiper-pagination-bullet,
+        .swiper-pagination-bullet-active {
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
+
+.video-button.slider-prev,
+.video-button.slider-next {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 12px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    
+     .welcome__slider-icon {
+        display: block;
+        width: 10px;
+        height: 12px;
+        fill: rgba(153, 153, 153, 1);
+        stroke: rgba(153, 153, 153, 1);
+        color: rgba(153, 153, 153, 1);
+     }
+     @include mobile {
+        width: 7px;
+        height: 8px;
+        .welcome__slider-icon {
+            width: 7px;
+            height: 8px;
+        }
+     }
+}
+
+.video-button-next {
+    top: 296px;
+    right: 620px;
+
+    @include tablet {
+        right: 285px;
+        top: 293px;
+    }
+
+    @include mobile {
+        right: 102px;
+        top: 173px;
+    }
+}
+
+.video-button-prev {
+    top: 296px;
+    left: 620px;
+
+    @include tablet {
+        left: 285px;
+        top: 293px;
+    }
+
+    @include mobile {
+       left: 102px;
+        top: 173px;
+    }
+}

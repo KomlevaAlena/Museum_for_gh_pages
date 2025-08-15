@@ -1,0 +1,252 @@
+.visiting__container {
+    width: 1440px;
+    position: relative;
+    padding: 64px 0 75px 0;
+
+    @include desc-small {
+        width: 984px;
+        padding: 53px 0 57px 0;
+    }
+
+     @include tablet {
+        width: 728px;
+        padding: 41px 0 78px 0;
+    }
+
+    @include mobile {
+        width: 380px;
+        padding: 41px 0 37px 0;
+    }
+}
+
+.visiting__title {
+    position: relative;
+    padding: 0 0 91px 0;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 1440px;
+        height: 3px;
+        background-color: $color-red-dark;
+        top: 126px;
+        left: 0;
+    }
+
+    @include desc-small {
+        padding: 0 0 75px 0;
+
+        &::after {
+            width: 984px;
+            top: 102px;
+        }
+    }
+
+    @include tablet {
+        padding: 0 0 63px 0;
+
+        &::after {
+            width: 728px;
+            top: 80px;
+        }
+    }
+
+    @include mobile {
+        padding: 0 0 60px 0;
+
+        &::after {
+            width: 380px;
+            top: 57px;
+        }
+    }
+}
+
+.visiting__list {
+    width: max-content;
+    display: grid;
+    grid-template-columns: 440px 440px 440px;
+    grid-template-rows: 1fr 1fr;
+    gap: 74px 60px;
+    margin: 0 auto;
+    padding: 0;
+
+    @include desc-small {
+        width: max-content;
+        grid-template-columns: 330px 330px;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 57px 108px;
+    }
+
+    @include tablet {
+        grid-template-columns: 280px 280px;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 38px 56px;
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 36px;
+    }
+
+}
+
+.visiting-card__link {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 300px;
+        height: 2px;
+        background-color: $color-red-dark;
+        top: 354px;
+        left: 0;
+        transition: all 0.5s;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 440px;
+            height: 2px;
+            background-color: $color-active-gd;
+            top: 354px;
+            left: 0;
+            transition: all 0.5s;
+        }
+    }
+
+    @include desc-small {
+        width: 330px;
+
+        &::after {
+            top: 281px;
+            width: 150px;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            &::after {
+                width: 330px;
+            }
+        }
+    }
+
+    @include tablet {
+        &::after {
+            top: 239px;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            &::after {
+                width: 280px;
+            }
+        }
+    }
+
+    @include mobile {
+        width: 330px;
+
+        &::after {
+            top: 236px;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            &::after {
+                width: 280px;
+                top: 236px;
+            }
+        }
+    }
+}
+
+.visiting-card__picture {
+    display: block;
+    width: 440px;
+    height: 285px;
+    margin: 0 auto;
+    padding: 0;
+
+    @include desc-small {
+        width: 330px;
+        height: 211px;
+    }
+
+    @include tablet {
+        width: 280px;
+        height: 180px;
+    }
+}
+
+.visiting-card__title {
+    display: block;
+    width: max-content;
+    margin: -13px auto -16px 0;
+    padding: 0 0 0 0;
+
+    @include desc-small {
+        margin: 0 auto -16px 0;
+        padding: 30px 0 39px 0;
+    }
+
+    @include tablet {
+        padding: 22px 0 37px 0;
+    }
+
+    @include mobile {
+        padding: 22px 0 33px 0;
+    }
+}
+
+.visiting-card__description {
+    &:first-of-type {
+        display: block;
+        width: max-content;
+        font-weight: 100;
+        font-size: 22px;
+        letter-spacing: -0.50px;
+        margin: 0 0 0 0;
+        padding: 0 0 12px 0;
+
+        @include desc-small {
+            font-size: 20px;
+        }
+
+        @include tablet {
+            font-size: 18px;
+            padding: 0 0 8px 0;
+        }
+
+        @include mobile {
+            letter-spacing: -1.25px;
+        }
+    }
+
+    &:last-of-type {
+        display: block;
+        width: max-content;
+        font-weight: 100;
+        font-size: 18px;
+        letter-spacing: -0.3px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+
+         @include desc-small {
+            font-size: 16px;
+        }
+    }
+}

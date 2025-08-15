@@ -1,0 +1,96 @@
+/* Nav Icon */
+.mobile-nav-btn {
+	position: absolute;
+	top: 56px;
+	right: 0;
+	background-color: transparent;
+	--time: 0.1s;
+	--width: 32px;
+	--height: 32px;
+	--color: transparent;
+
+	display: none;
+	justify-content: center;
+	align-items: center;
+
+	@include desc-small {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include tablet {
+		top: 46px;
+	}
+
+	@include mobile {
+		top: 36px;
+		right: 19px;
+	}
+}
+
+.nav-icon {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	background-color: var(--color);
+	// border-radius: var(--radius);
+	.burger-icon {
+		display: block;
+		width: 32px;
+		height: 18px;
+		fill: $color-white;
+		stroke: $color-white;
+	}
+	
+	.cross-icon {
+		display: none;
+	}
+}
+
+.nav-icon.nav-icon--active {
+	background-color: transparent;
+
+	.burger-icon {
+		display: none;
+		width: 32px;
+		height: 18px;
+		fill: $color-white;
+		stroke: $color-white;
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			fill: $color-font-gd;
+			stroke: $color-font-gd;
+		}
+
+		&:active {
+			fill: $color-active-gd;
+			stroke: $color-active-gd;
+		}
+	}
+	
+	.cross-icon {
+		display: block;
+		width: 25px;
+		height: 25px;
+		fill: $color-white;
+		stroke: $color-white;
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			fill: $color-font-gd;
+			stroke: $color-font-gd;
+		}
+
+		&:active {
+			fill: $color-active-gd;
+			stroke: $color-active-gd;
+		}
+	}
+}
+
+.mobile-nav-btn,
+.form--btn {
+	z-index: 999;
+}

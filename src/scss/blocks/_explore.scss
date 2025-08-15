@@ -1,0 +1,202 @@
+.explore {
+    background-color: $color-bg-dark;
+    color: $color-white;
+    padding: 63px 0 100px 0;
+
+    @include desc-small {
+        padding: 53px 0 66px 0;
+    }
+
+    @include tablet {
+        padding: 40px 0 43px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0 43px 0;
+    }
+}
+
+.explore__description {
+    color: $color-white;
+    line-height: 36px;
+    letter-spacing: -0.2px;
+    padding: 0 0 30px 0;
+
+    @include desc-small {
+        display: block;
+        width: 984px;
+        padding: 0 0 0 0;
+        font-size: 20px;
+        line-height: 34px;
+        letter-spacing: -0.1px;
+
+        br {
+            display: none;
+        }
+
+        &:last-of-type {
+            display: none;
+        }
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.text-yellow {
+    color: #caaa7d;
+}
+
+.explore__container {
+    position: relative;
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 660px 720px;
+    grid-template-rows: auto;
+    gap: 60px;
+    margin: 0 auto;
+    padding: 0;
+
+    @include desc-small {
+        width: 984px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    @include tablet {
+        width: 728px;
+    }
+
+    @include mobile {
+        width: 380px;
+    }
+}
+
+.explore__title {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 660px;
+    line-height: 80px;
+    margin: 0;
+    padding: 0 0 93px 0;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 660px;
+        height: 3px;
+        background-color: $color-red-dark;
+        top: 126px;
+        left: 0;
+    }
+
+    @include desc-small {
+        width: 984px;
+        padding: 0 0 78px 0;
+
+        &::after {
+            width: 984px;
+            top: 102px;
+        }
+    }
+
+    @include tablet {
+        width: 728px;
+        padding: 0 0 0 0;
+
+        &::after {
+            width: 728px;
+            top: 80px;
+        }
+    }
+
+    @include mobile {
+        width: 380px;
+
+        &::after {
+            width: 380px;
+            top: 60px;
+        }
+        
+    }
+}
+
+.explore__picture {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 26px 0 0 0;
+    width: 720px;
+    height: 700px;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 39px;
+        height: 700px;
+        top: 26px;
+        left: 420px;
+        z-index: 100;
+        background-image: image-set(
+            url("../img/brake.png") 1x,
+            url("../img/brake-2x.png") 2x
+        );
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    @include desc-small {
+        padding: 6px 0 0 0;
+
+        &::after{
+            top: 6px;
+            left: 421px;
+        }
+    }
+
+    @include tablet {
+        width: 728px;
+        height: 705px;
+        padding: 3px 0 0 0;
+
+        &::after{
+            top: 3px;
+            left: 420px;
+            width: 39px;
+            height: 705px;
+        }
+    }
+
+    @include mobile {
+        width: 380px;
+        height: 368px;
+        padding: 3px 0 0 0;
+
+        &::after{
+            top: 3px;
+            left: 220px;
+            width: 39px;
+            height: 368px;
+        }
+    }
+}
+
+.explore-icon {
+    position: absolute;
+    content: "";
+    display: none;
+    width: 39px;
+    height: 700px;
+    stroke: $color-white;
+    fill: $color-white;
+    top: 26px;
+    left: 1142px;
+    z-index: 100;
+}
+

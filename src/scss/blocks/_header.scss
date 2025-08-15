@@ -1,0 +1,11 @@
+.header {
+	background-color: $color-bg-dark;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.header__nav {
+	@include tablet {
+		display: none;
+	}
+}

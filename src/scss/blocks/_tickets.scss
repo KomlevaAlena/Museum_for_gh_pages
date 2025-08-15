@@ -1,0 +1,447 @@
+.tickets__container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 65px 0 75px 0;
+
+    @include desc-small {
+        width: 984px;
+        padding: 53px 0 60px 0;
+    }
+
+    @include tablet {
+        width: 728px;
+        padding: 38px 0 41px 0;
+    }
+
+    @include mobile {
+        width: 380px;
+        padding: 40px 0 41px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+}
+
+.tickets__title {
+    position: relative;
+    padding: 0 0 90px 0;
+    margin: 0 0 0 0;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 1440px;
+        height: 3px;
+        background-color: $color-red-dark;
+        top: 125px;
+        left: 0;
+    }
+
+    @include desc-small {
+      padding: 0 0 75px 0;
+
+      &::after {
+        width: 984px;
+        top: 102px;
+      }
+    }
+
+    @include desc-small {
+      padding: 0 0 65px 0;
+
+      &::after {
+        width: 728px;
+        top: 82px;
+      }
+    }
+
+    @include mobile {
+      width: 380px;
+      padding: 0 0 50px 0;
+      align-self: start;
+
+      &::after {
+        width: 380px;
+        top: 60px;
+      }
+    }
+}
+
+.tickets__picture {
+    display: block;
+    @include desc-small {
+      width: 700px;
+      height: 440px;
+      overflow: hidden;
+    }
+
+    @include tablet {
+      width: 444px;
+      height: 340px;
+    }
+
+    @include mobile {
+      width: 380px;
+      height: 160px;
+    }
+}
+
+.tickets__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: start;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+
+    @include tablet {
+      gap: 39px;
+    }
+
+    @include mobile {
+        width: 380px;
+        padding: 13px 0 0 0;
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.tickets__form {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   width: 660px;
+   margin: 0 auto;
+   padding: 0 0 0 0;
+
+   @include desc-small {
+    width: 175px;
+    margin: 0 0 0 0;
+   }
+
+   @include mobile {
+    flex-direction: column;
+   }
+}
+
+.tickets__legend {
+    width: max-content;
+    padding: 0 0 50px 0;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.tickets {
+  &__radio {
+    width: 270px;
+  }
+
+  &-filter__list--radio {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    padding: 0;
+    margin: 0 auto;
+    width: 270px;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__control {
+    display: block;
+    padding-left: 40px;
+    margin: 0;
+    font-family: $font-roboto;
+    font-weight: 300;
+    font-size: 22px;
+    color: $color-black;
+    cursor: pointer;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+
+    &[type="radio"] {
+      & + .tickets__mark {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 17px;
+        height: 17px;
+        border: 2px solid $color-black;
+        background-color: transparent;
+        border-radius: 50%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: transparent;
+          transition: all 0.3s;
+        }
+      }
+
+      &:checked + .tickets__mark {
+        border-color: $color-black;
+
+        &::before {
+          background-color: $color-black;
+        }
+      }
+
+      &:hover + .tickets__mark {
+        border-color: $color-black;
+
+        &::before {
+          background-color: rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      &:focus + .tickets__mark {
+        border-color: $color-black;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+      }
+
+      &:disabled + .tickets__mark {
+        border-color: rgba(0, 0, 0, 0.25);
+        background-color: transparent;
+
+        &::before {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.tickets__radio {
+  @include desc-small {
+    display: none;
+  }
+}
+
+.tickets__range {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: start;
+    margin: 0;
+    padding: 0 0 0 0;
+
+    @include tablet {
+      gap: 35px;
+    }
+
+    @include mobile {
+        gap: 0;
+    }
+
+    .tickets__legend {
+        text-align: end;
+        margin: 0 0 0 auto;
+        padding: 0 0 0 0;
+
+        @include desc-small {
+        margin: 0;
+        padding: 0 0 0 19px;
+      }
+
+      @include tablet {
+        margin: 0;
+        padding: 0 0 0 21px;
+      }
+
+      @include mobile {
+        margin: 0;
+        padding: 0 0 0 0;
+        text-align: center;
+      }
+    }
+}
+
+.tickets {
+  &-field {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 14px;
+    margin: 0 0;
+    font-family: $font-roboto;
+    font-weight: 300;
+    font-size: 22px;
+
+      @include desc-small {
+        margin: 3px 0 0 -5px;
+        padding: 0 0 0 0;
+        gap: 9px;
+    }
+
+    @include mobile {
+        margin: 20px 0 0 0;
+        gap: 0;
+    }
+  }
+
+  &-value__adult,
+  &-value__senior {
+    width: 150px;
+    border-radius: 0;
+    text-align: center;
+
+    @include desc-small {
+      width: 174px;
+      margin: 0 0 22px 0;
+    }
+
+    @include tablet {
+      margin: 0 0 17px 0;
+    }
+
+    @include mobile {
+      margin: 0 0 21px 0;
+    }
+  }
+
+  &-total {
+    margin: 29px 0 0 24px;
+    text-align: start;
+    align-self: start;
+    font-family: $font-roboto;
+    font-weight: 700;
+    font-size: 28px;
+
+    @include desc-small {
+      margin: -22px 0 0 20px;
+      letter-spacing: 0.06em;
+    }
+
+    @include tablet {
+      margin: -14px 0 0 20px;
+    }
+
+    @include mobile {
+      margin: 20px 0 0 0;
+      font-size: 16px;
+      text-align: center;
+      align-self: center;
+    }
+  }
+}
+
+.tickets-label {
+    text-align: start;
+    align-self: start;
+    padding: 0 0 0 0;
+
+    @include mobile {
+        font-weight: 300;
+        font-size: 16px;
+        margin: 0;
+        padding: 0 0 15px 0;
+        text-align: center;
+      }
+}
+
+.tickets__button {
+  margin: 37px auto 0 auto;
+  padding: 12px 35px 12px 35px;
+  width: 175px;
+  font-weight: 300;
+  font-size: 22px;
+  background-color: $color-black;
+
+  &:hover,
+    &:focus,
+    &:focus-visible {
+        background-color: $color-font-gd;
+        color: $color-black;
+    }
+
+    &:active {
+        background-color: $color-active-gd;
+        color: $color-black;
+    }
+
+  @include desc-small{
+    margin: 43px 0 0 20px;
+    padding: 15px 35px 13px 35px;
+  }
+
+  @include tablet {
+      margin: 5px 0 0 21px;
+    }
+
+    @include mobile {
+      margin: 40px 0 0 0;
+      font-size: 16px;
+      text-align: center;
+      align-self: center;
+    }
+}
+
+.tickets-input-group {
+  width: 150px;
+}
+.tickets-quantity {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    border: 4px solid $color-black;
+    margin: 14px 0 0 0;
+    padding: 7px 0 1px 0;
+}
+
+.tickets-quantity-button {
+    width: 30px;
+    height: 30px;
+    background-color: $color-white;
+    border: 1px solid transparent;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tickets-quantity-button:hover {
+    background-color: $color-bg-light;
+}
+
+.tickets-value__adult,
+.tickets-value__senior {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    margin: 0 15px;
+    border: 1px solid transparent;
+}

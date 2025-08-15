@@ -1,0 +1,108 @@
+/* SCSS стили */
+.custom-select {
+  position: relative;
+  width: 100%;
+  font-family: $font-roboto;
+  margin-bottom: 20px;
+
+  .selected-option {
+    padding: 15px;
+    border: 1px solid $color-black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: $color-black;
+    }
+
+    .selected-text {
+      flex-grow: 1;
+      color: $color-black;
+      font-family: $font-roboto;
+
+      &[data-placeholder] {
+        color: rgba($color-black, 1);
+      }
+    }
+
+    .arrow {
+      transition: transform 0.3s;
+      margin-left: 10px;
+    }
+  }
+
+  .select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid $color-black;
+    border-top: none;
+    background-color: $color-white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 100;
+    max-height: 200px;
+    overflow-y: auto;
+
+    .option {
+      padding: 12px 15px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $color-bg-light;
+      }
+
+      &.selected {
+        background-color: rgba($color-bg-light, 0.5);
+      }
+    }
+  }
+
+  &.active {
+    .selected-option {
+      border-bottom-color: transparent;
+    }
+
+    .arrow {
+      transform: rotate(180deg);
+    }
+
+    .select-options {
+      display: block;
+    }
+  }
+
+  .selected-option {
+    .selected-text {
+      &[data-placeholder] {
+        color: rgba($color-black, 1);
+      }
+    }
+  }
+}
+
+.form-type-display {
+  padding: 5px;
+  border: 1px solid $color-black;
+  background: transparent;
+  color: $color-black;
+  width: 166px;
+  cursor: default;
+  font-family: $font-roboto;
+  font-size: 18px;
+
+  &[data-placeholder] {
+    color: $color-black;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+}
