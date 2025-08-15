@@ -1,0 +1,397 @@
+.gallery {
+    background-color: $color-bg-dark;
+    max-height: 2200px;
+    overflow: hidden;
+
+    @include desc-small {
+       max-height: 1460px; 
+    }
+
+    @include tablet {
+        max-height: 1220px;
+    }
+
+    @include mobile {
+        max-height: 757px;
+    }
+}
+
+.gallery__container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 64px 0 60px 0;
+
+    @include desc-small {
+        width: 984px;
+        padding: 53px 0 60px 0;
+    }
+
+    @include tablet {
+        width: 728px;
+        padding: 38px 0 60px 0;
+    }
+
+    @include mobile {
+        width: 380px;
+        padding: 41px 0 60px 0;
+    }
+}
+.gallery__wrapper {
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 36px;
+    justify-content: center;
+    margin: 0 auto;
+
+    & > :first-child {
+    padding: 49px 0 0 0;
+
+    @include tablet {
+        padding: 50px 0 0 0;
+    }
+  }
+
+   & > :last-child {
+    padding: 49px 0 0 0;
+  }
+
+  @include desc-small {
+        width: 984px;
+    }
+
+    @include tablet {
+        gap: 24px;
+        width: 728px;
+    }
+
+    @include mobile {
+        width: 380px;
+    }
+}
+
+.gallery__list {
+    width: 456px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: start;
+    margin: 0;
+
+    &:first-of-type {
+        .gallery__picture--second {
+            order: -4;
+        }
+        .gallery__picture--nine{
+            order: -3;
+        }
+        .gallery__picture--four {
+            order: -2;
+        }
+        .gallery__picture--six {
+            order: -1;
+        }
+    }
+
+    &:nth-of-type(2n) {
+        .gallery__picture--first {
+            order: -4;
+        }
+        .gallery__picture--eight {
+            order: -3;
+        }
+        .gallery__picture--third {
+            order: -2;
+        }
+        .gallery__picture--five {
+            order: -1;
+        }
+    }
+
+    &:last-of-type {
+        .gallery__picture--seven {
+            order: -4;
+        }
+        .gallery__picture--ten {
+            order: -3;
+        }
+        .gallery__picture--fifteen {
+            order: -2;
+        }
+        .gallery__picture--twelve {
+            order: -1;
+        }
+    }
+
+    @include desc-small {
+        width: 304px;
+
+        &:first-of-type {
+            .gallery__picture--first {
+                order: -4;
+            }
+            .gallery__picture--second {
+                order: -3;
+            }
+            .gallery__picture--eleven {
+                order: -2;
+            }
+            .gallery__picture--five {
+                order: -1;
+            }
+            .gallery__picture--nine{
+                order: 0;
+            }
+            .gallery__picture--four {
+                order: 1;
+            }
+            .gallery__picture--six {
+                order: 2;
+            }
+        }
+
+        &:nth-of-type(2n) {
+            .gallery__picture--seven {
+                order: -4;
+            }
+            .gallery__picture--eight {
+                order: -3;
+            }
+            .gallery__picture--thirteen {
+                order: -2;
+            }
+            .gallery__picture--fourteen {
+                order: -1;
+            }
+
+            .gallery__picture--first {
+                order: 0;
+            }
+            .gallery__picture--third {
+                order: 1;
+            }
+            .gallery__picture--five {
+                order: 2;
+            }
+        }
+
+        &:last-of-type {
+            .gallery__picture--twelve {
+                order: -4;
+            }
+            .gallery__picture--third {
+                order: -3;
+            }
+            .gallery__picture--four {
+                order: -2;
+            }
+            .gallery__picture--six {
+                order: -1;
+            }
+            .gallery__picture--seven {
+            order: 0;
+            }
+            .gallery__picture--ten {
+                order: 1;
+            }
+            .gallery__picture--fifteen {
+                order: 2;
+            }
+        }
+    }
+
+    @include tablet {
+        width: 352px;
+
+        &:first-of-type {
+            .gallery__picture--four {
+                order: -4;
+            }
+            .gallery__picture--seven {
+                order: -3;
+            }
+            .gallery__picture--eleven {
+                order: -2;
+            }
+            .gallery__picture--first {
+                order: -1;
+            }
+            .gallery__picture--second {
+                order: 0;
+            }
+            .gallery__picture--five {
+                order: 1;
+            }
+            .gallery__picture--nine{
+                order: 2;
+            }
+            .gallery__picture--six {
+                order: 3;
+            }
+        }
+        &:nth-of-type(2n) {
+            .gallery__picture--thirteen {
+                order: -4;
+            }
+            .gallery__picture--twelve {
+                order: -3;
+            }
+            .gallery__picture--nine {
+                order: -2;
+            }
+            .gallery__picture--ten {
+                order: -1;
+            }
+            .gallery__picture--seven {
+                order: 0;
+            }
+            .gallery__picture--eight {
+                order: 1;
+            }
+            .gallery__picture--fourteen {
+                order: 2;
+            }
+            .gallery__picture--first {
+                order: 3;
+            }
+            .gallery__picture--third {
+                order: 4;
+            }
+            .gallery__picture--five {
+                order: 5;
+            }
+        }
+        &:last-of-type {
+            display: none;
+        }
+    }
+
+    @include mobile {
+        width: 178px;
+
+        &:first-of-type {
+           .gallery__picture--seven {
+            order: -4;
+            }
+
+            .gallery__picture--five {
+                order: -3;
+            }
+
+            .gallery__picture--fourteen {
+                order: -2;
+            }
+            .gallery__picture--four {
+                order: -1;
+            }
+            
+            .gallery__picture--eleven {
+                order: 0;
+            }
+            .gallery__picture--first {
+                order: 1;
+            }
+            .gallery__picture--second {
+                order: 2;
+            }
+            
+            .gallery__picture--nine{
+                order: 3;
+            }
+            .gallery__picture--six {
+                order: 4;
+            }
+        }
+
+        &:nth-of-type(2n) {
+
+            .gallery__picture--nine {
+                order: -4;
+            }
+            .gallery__picture--ten {
+                order: -3;
+            }
+
+            .gallery__picture--twelve {
+                order: -2;
+            }
+            .gallery__picture--thirteen {
+                order: -1;
+            }
+            .gallery__picture--seven {
+                order: 0;
+            }
+            .gallery__picture--eight {
+                order: 1;
+            }
+            .gallery__picture--fourteen {
+                order: 2;
+            }
+            .gallery__picture--first {
+                order: 3;
+            }
+            .gallery__picture--third {
+                order: 4;
+            }
+            .gallery__picture--five {
+                order: 5;
+            }
+        }
+    }
+}
+
+.gallery__title {
+    width: max-content;
+    padding: 0 0 64px 0;
+    margin: 0 0 0 0;
+
+    @include desc-small {
+        padding: 0 0 53px 0;
+    }
+
+    @include tablet {
+        padding: 0 0 42px 0;
+    }
+
+    @include mobile {
+        padding: 0 0 39px 0;
+    }
+}
+
+.gallery__item {
+    width: 456px;
+    height: max-content;
+
+    @include desc-small {
+        width: 304px;
+    }
+
+    @include tablet {
+        width: 352px;
+    }
+
+    @include mobile {
+        width: 178px;
+    }
+
+}
+
+.gallery__picture {
+    display: block;
+    object-fit: cover;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    @include desc-small {
+        width: 304px;
+    }
+    @include tablet {
+        width: 352px;
+    }
+
+    @include mobile {
+        width: 178px;
+    }
+}

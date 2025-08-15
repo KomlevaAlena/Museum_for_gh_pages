@@ -1,0 +1,133 @@
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header__container {
+    position: static;
+
+    @include desc-small {
+        position: relative;
+    }
+}
+
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 62px 0 36px 0;
+
+    @include desc-small {
+        padding: 52px 0 50px 0;
+    }
+
+    @include tablet {
+        padding: 46px 0 50px 0;
+    }
+
+    @include mobile {
+        max-width: 380px;
+        padding: 36px 0 50px 0;
+    }
+}
+
+.main-nav__logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+
+    svg {
+        display: block;
+        color: $color-white;
+        stroke: $color-white;
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            stroke: $color-font-gd;
+        }
+
+        &:active {
+            stroke: $color-active-gd;
+        }
+    }
+
+    
+}
+
+.icon--mus-logo {
+    width: 49px;
+    height: 23px;
+
+    @include tablet {
+        width: 48px;
+        height: 28px;
+    }
+
+    @include mobile {
+        width:29px;
+        height: 16px;
+    }
+}
+
+.icon--louvre {
+    width: 144px;
+    height: 28px;
+    padding: 0 0 0 25px;
+
+    @include tablet {
+        width: 137px;
+        height: 28px;
+        padding: 0 0 0 21px;
+    }
+
+    @include mobile {
+        width:82px;
+        height: 18px;
+        padding: 0 0 0 25px;
+    }
+}
+
+.main-nav__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: max-content;
+    gap: 53px;
+    margin: 0;
+    padding: 0;
+
+    @include desc-small {
+        display: none;
+    }
+}
+
+.main-nav__item {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav__link {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav-btn {
+    display: none;
+}

@@ -1,0 +1,18 @@
+/* Контейнеры */
+.container {
+	margin: 0 auto;
+	width: 1920px;
+
+	@include desc-small {
+		width: 984px;
+	}
+
+	@include tablet {
+		width: 728px;
+	}
+
+	@include mobile {
+		width: 420px;
+	}
+}
+

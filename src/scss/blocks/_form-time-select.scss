@@ -1,0 +1,107 @@
+.custom-time-select {
+  position: relative;
+  width: 190px;
+  font-family: $font-roboto;
+
+  .selected-option {
+    padding: 15px 15px;
+    border: 1px solid $color-black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: $color-white;
+
+    .time-icon {
+      display: block;
+      width: 15px;
+      height: 15px;
+      fill: $color-black;
+      stroke: $color-black;
+      flex-shrink: 0;
+    }
+
+    .selected-time {
+      flex-grow: 1;
+      color: $color-black;
+
+      &[data-placeholder] {
+        color: $color-black;
+      }
+    }
+
+    // .arrow-wrapper {
+    //     background-color: $color-black;
+    //     border-radius: 50%;
+    //     width: 17px;
+    //     height: 17px;
+    //     margin-left: auto;
+    //     flex-shrink: 0;
+    //     }
+    // .arrow {
+    //   transition: transform 0.2s;
+    //   margin-left: auto;
+    //   fill: $color-black;
+    //   stroke: $color-black;
+    //   color: $color-black;
+    // }
+  }
+
+  .custom-time-select.active .arrow {
+  transform: rotate(180deg);
+}
+
+  .time-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid $color-black;
+    margin-top: 5px;
+    background-color: $color-white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 100;
+    max-height: 200px;
+    overflow-y: auto;
+
+    .option {
+      padding: 10px 15px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-bg-light;
+      }
+    }
+  }
+
+  &.active {
+    .arrow {
+      transform: rotate(180deg);
+    }
+
+    .time-options {
+      display: block;
+    }
+  }
+}
+
+.form-time-display {
+  padding: 5px;
+  border: 1px solid $color-black;
+  background: transparent;
+  color: $color-black;
+  width: 166px;
+  cursor: default;
+  font-family: $font-roboto;
+  font-size: 18px;
+
+  &[data-placeholder] {
+    color: $color-black;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+}

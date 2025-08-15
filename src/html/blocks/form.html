@@ -1,0 +1,167 @@
+<div class="form-wrapper">
+  
+    
+    <form class="form" action="https://httpbin.org/post" method="post" data-form-validate data-callback="base">
+      <button class="form-modal-btn">
+        <span class="form-icon">
+            <svg class="burger-icon icon">
+                <use href="./img/svgsprite/sprite.symbol.svg#burger"></use>
+            </svg>
+            <svg class="cross-icon icon">
+                <use href="./img/svgsprite/sprite.symbol.svg#cross"></use>
+            </svg>
+        </span>
+      </button>
+      <div class="form-wrapper__group">
+      <h2 class="form-wrapper__title title">Booking tickets</h2>
+      <p class="form-wrapper__slogan">Tour to Louvre</p>
+        <div class="form__group">
+            <div class="custom-date-select">
+            <div class="selected-option">
+              <svg class="calendar-icon icon">
+                <use href="./img/svgsprite/sprite.symbol.svg#date"></use>
+              </svg>
+                <span class="selected-date" data-placeholder="Date">Date</span>
+                <span class="arrow">▼</span>
+              </div>
+              <div class="date-options" data-validate-type="select">
+                <div class="option" data-value="2023-11-15">15 november 2023</div>
+                <div class="option" data-value="2023-11-16">16 november 2023</div>
+                <div class="option" data-value="2023-11-17">17 november 2023</div>
+              </div>
+          
+              <input type="hidden" name="selected-date" id="selected-date">
+        </div>
+        <div class="custom-time-select">
+          <div class="selected-option">
+            <svg class="time-icon icon">
+              <use href="./img/svgsprite/sprite.symbol.svg#time"></use>
+            </svg>
+            <span class="selected-time" data-placeholder="Time">Time</span>
+             <span class="arrow">▼</span>
+          </div>
+          <div class="time-options" data-validate-type="select">
+            <div class="option" data-value="09:00">09:00 AM</div>
+            <div class="option" data-value="10:00">10:00 AM</div>
+            <div class="option" data-value="11:00">11:00 AM</div>
+            <div class="option" data-value="12:00">12:00 PM</div>
+            <div class="option" data-value="13:00">01:00 PM</div>
+            <div class="option" data-value="14:00">02:00 PM</div>
+          </div>
+          <input type="hidden" name="selected-time" id="selected-time">
+        </div>
+            <span class="form-area__name">
+              <svg class="name-icon icon">
+                <use href="./img/svgsprite/sprite.symbol.svg#name"></use>
+              </svg>
+              <label class="form-area__label visually-hidden" for="form-area__name">
+                Name:
+              </label>
+              <input class="form-area__field form-area__name" type="text" id="form-area__name" name="form-name" placeholder="Name" pattern="[A-Za-zА-Яа-яЁё\s\-]{3,15}" data-message-extra="The name must contain only letters, hyphens and spaces (3-15 characters)" data-validate-type="text" required>
+            </span>
+            <span class="form-area__email" data-validate-type="email" data-on-input-validate data-required>
+              <svg class="email-icon icon">
+                <use href="./img/svgsprite/sprite.symbol.svg#email"></use>
+              </svg>
+              <label class="form-area__label visually-hidden" for="form-email">
+                e-mail:
+              </label>
+              <input class="form-area__field form-area__email" type="email" id="form-email" name="form-email" placeholder="E-mail" required>
+              <span class="form-email__icon-wrapper">
+              </span>
+            </span>
+            <span class="form-area__phone" data-validate-type="phone" data-on-input-validate  data-required data-phone-length="18">
+              <svg class="tel-icon icon">
+                <use href="./img/svgsprite/sprite.symbol.svg#tel"></use>
+              </svg>
+              <label class="form-area__label  visually-hidden" for="form-phone">
+                phone:
+              </label>
+              <input class="form-area__field form-phone" type="text" id="form-phone" name="form-phone" placeholder="Phone" required>
+              <span class="form-phone__icon-wrapper">
+              </span>
+            </span>
+            <div class="custom-select">
+              <div class="selected-option">
+                <span class="selected-text" data-placeholder="Select ticket type">Select ticket type</span>
+                <span class="arrow">▼</span>
+              </div>
+              <div class="select-options">
+                <div class="option" data-value="permanent">Permanent exhibition</div>
+                <div class="option" data-value="temporary">Temporary exhibition</div>
+                <div class="option" data-value="combined">Combined Admission</div>
+              </div>
+              <select class="form__select-wrapper form-select" name="Ticket Type" aria-label="Ticket Type" data-validate-type="select" hidden>
+                <option value="" selected disabled>Select ticket type</option>
+                <option value="permanent">Permanent exhibition</option>
+                <option value="temporary">Temporary exhibition</option>
+                <option value="combined">Combined Admission</option>
+              </select>
+            </div>
+            <fieldset class="form-tickets__range range">
+							<legend class="form-tickets__legend">Entry ticket</legend>
+							<div class="form-tickets-slider" id="form-slider"></div>
+							<div class="form-tickets-field">
+								<div class="form-tickets-input-group">
+									<label class="form-tickets-label" for="form-adult-count">Basic 18+</label>
+									<div class="form-tickets-quantity">
+										<button class="form-tickets-quantity-button minus" type="button" data-target="form-adult-count">—</button>
+										<input class="form-tickets-value__adult" type="number" id="form-adult-count" placeholder="1" min="1" value="1">
+										<button class="form-tickets-quantity-button plus" type="button" data-target="form-adult-count">+</button>
+									</div>
+								</div>
+								<div class="form-tickets-input-group">
+									<label class="form-tickets-label" for="form-senior-count">Senior 65+</label>
+									<div class="form-tickets-quantity">
+										<button class="form-tickets-quantity-button minus" type="button" data-target="form-senior-count">—</button>
+										<input class="form-tickets-value__senior" type="number" id="form-senior-count" placeholder="1" min="1" value="1">
+										<button class="form-tickets-quantity-button plus" type="button" data-target="form-senior-count">+</button>
+									</div>
+								</div>
+							</div>
+							<button class="form-tickets__button button" id="form-buy_ticket">Buy Now</button>
+						</fieldset>
+        </div>
+      </div>
+      <div class="form-wrapper__booking">
+        <div class="form-img"></div>
+        <input type="text" class="form-date-display" id="date-display" readonly placeholder="Select date">
+        <input type="text" class="form-time-display" id="time-display" readonly placeholder="Select time">
+        <input type="text" class="form-type-display" id="type-display" readonly placeholder="Select type ticket">
+        <div class="form-quantity-wrapper">
+          <fieldset class="form-quantity-adult">
+            <input type="text" class="form-adult-count" id="adult-count" readonly placeholder="0">
+            <span class="form-adult-label">Basic (20 €)</span>
+            <input type="text" class="form-adult-sum" id="adult-sum" readonly placeholder="0">
+          </fieldset>
+          <fieldset class="form-quantity-senior">
+            <input type="text" class="form-senior-count" id="senior-count" readonly placeholder="0">
+            <span class="form-senior-label">Senior (10 €)</span>
+            <input type="text" class="form-senior-sum" id="senior-sum" readonly placeholder="0">
+          </fieldset>
+        </div>
+        <fieldset class="form-total">
+          <span class="form-total-label">Total:</span>
+          <span class="form-total-sum" id="total-sum">0</span>
+        </fieldset>
+
+        <div class="form-card__wrapper">
+          <fieldset class="form-card-front">
+            <label class="form-card__label" for="card-number">Card number</label>
+            <input type="text" class="form-card__number" id="card-number" placeholder="Card number">
+            <label class="form-card__label" for="card-date">Expiration date</label>
+            <input type="text" class="form-card__date" id="card-date" placeholder="MM/YY">
+            <label class="form-card__label" for="card-cardholder">Cardholder name</label>
+            <input type="text" class="form-card__cardholder" id="card-cardholder" placeholder="Cardholder name">
+            
+          </fieldset>
+          <fieldset class="form-card-back">
+            <label class="form-card__label" for="card-cvv">CVV</label>
+            <input type="text" class="form-card__cvv" id="card-cvv" placeholder="CVV">
+            <span>The last 3 or 4 digits on back of the card</span>
+          </fieldset>
+        </div>
+        <button class="form-booking__button button">Book</button>
+      </div>
+    </form>
+</div>
